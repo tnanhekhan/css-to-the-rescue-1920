@@ -23,6 +23,7 @@ Goals of this week:
 - Be inspired
 - Discuss hot CSS topics.
 - Get going!
+[Live version of week 1](https://tnanhekhan.github.io/css-to-the-rescue-1920/)
 
 <!-- [Opdrachten](https://drive.google.com/open?id=1OVhWQNaCgSluYviTKKWcApkyPd23xow1PiExb8GYANM) -->
 
