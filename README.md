@@ -4,6 +4,9 @@ _This course is in English_
 
 In this three week course you are going to create an innovative, experimantal, yet pleasurable user experience by using CSS and SVG. No Javascrpt allowed.
 
+[Live version](https://tnanhekhan.github.io/css-to-the-rescue-1920/)
+
+
 ## Learning goals
 - _You understand the broader scope of CSS: You can show that CSS can be used for more than just styling web pages._
 - _You understand the progressive enhancement parts of CSS: You can show that you can use the cascade, inheritance and specificity in your project_
@@ -12,7 +15,7 @@ In this three week course you are going to create an innovative, experimantal, y
 
 [Rubric](https://docs.google.com/spreadsheets/d/1Xv48MSiACNmnM6nXpGGUb8mJDC459uSaxJszO_zLEp8/edit?usp=sharing)
 
-## Programm
+## Program
 
 ### Week 1 - 👁 C what you did there
 
@@ -24,7 +27,6 @@ Goals of this week:
 - Discuss hot CSS topics.
 - Get going!
 
-[Live version of week 1](https://tnanhekhan.github.io/css-to-the-rescue-1920/)
 
 <!-- [Opdrachten](https://drive.google.com/open?id=1OVhWQNaCgSluYviTKKWcApkyPd23xow1PiExb8GYANM) -->
 
