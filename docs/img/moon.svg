@@ -1,0 +1,41 @@
+<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+    <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+    <g>
+        <ellipse ry="180" rx="180" id="svg_2" cy="250" cx="250" stroke-width="4.5" stroke="whitesmoke"
+                 fill="whitesmoke"/>
+        <ellipse ry="23.5" rx="23.5" id="svg_4" cy="162.953125" cx="186" fill-opacity="null"
+                 stroke-opacity="null" stroke-width="4" stroke="midnightblue" fill="whitesmoke"/>
+        <ellipse ry="22" rx="22" id="svg_5" cy="153.453125" cx="335.5" fill-opacity="null" stroke-opacity="null"
+                 stroke-width="4" stroke="midnightblue" fill="whitesmoke"/>
+        <ellipse ry="18.5" rx="19" id="svg_6" cy="177.953125" cx="284.5" fill-opacity="null"
+                 stroke-opacity="null" stroke-width="4" stroke="midnightblue" fill="whitesmoke"/>
+        <ellipse ry="24.5" rx="25" id="svg_7" cy="229.953125" cx="192.5" fill-opacity="null"
+                 stroke-opacity="null" stroke-width="4" stroke="midnightblue" fill="whitesmoke"/>
+        <ellipse ry="28.5" rx="29" id="svg_8" cy="315.953125" cx="278.5" fill-opacity="null"
+                 stroke-opacity="null" stroke-width="4" stroke="midnightblue" fill="whitesmoke"/>
+        <ellipse ry="24.5" rx="25" id="svg_9" cy="254.953125" cx="380" fill-opacity="null" stroke-opacity="null"
+                 stroke-width="4" stroke="midnightblue" fill="whitesmoke"/>
+        <ellipse ry="29.5" rx="30" id="svg_10" cy="325.953125" cx="154" fill-opacity="null"
+                 stroke-opacity="null" stroke-width="4" stroke="midnightblue" fill="whitesmoke"/>
+        <ellipse ry="19.5" rx="20" id="svg_11" cy="119.953125" cx="242" fill-opacity="null"
+                 stroke-opacity="null" stroke-width="4" stroke="midnightblue" fill="whitesmoke"/>
+        <ellipse ry="12" rx="11.5" id="svg_12" cy="353.953125" cx="363" fill-opacity="null"
+                 stroke-opacity="null" stroke-width="4" stroke="midnightblue" fill="whitesmoke"/>
+        <ellipse ry="20" rx="20" id="svg_13" cy="370.453125" cx="255.5" fill-opacity="null"
+                 stroke-opacity="null" stroke-width="4" stroke="midnightblue" fill="whitesmoke"/>
+        <ellipse ry="32" rx="32" id="svg_15" cy="229.453125" cx="124" fill-opacity="null" stroke-opacity="null"
+                 stroke-width="4" stroke="midnightblue" fill="whitesmoke"/>
+        <ellipse ry="5" rx="5" id="svg_16" cy="222.453125" cx="118.5" fill-opacity="null" stroke-opacity="null"
+                 stroke-width="4" stroke="midnightblue" fill="whitesmoke"/>
+        <ellipse ry="6.5" rx="7" id="svg_17" cy="219.953125" cx="323" fill-opacity="null" stroke-opacity="null"
+                 stroke-width="4" stroke="midnightblue" fill="whitesmoke"/>
+        <ellipse ry="3" rx="3" id="svg_18" cy="313.453125" cx="140" fill-opacity="null" stroke-opacity="null"
+                 stroke-width="4" stroke="midnightblue" fill="whitesmoke"/>
+        <ellipse ry="8" rx="8" id="svg_19" cy="178.453125" cx="373.5" fill-opacity="null" stroke-opacity="null"
+                 stroke-width="4" stroke="midnightblue" fill="whitesmoke"/>
+        <ellipse rx="2" id="svg_20" cy="280.453125" cx="721.5" fill-opacity="null" stroke-opacity="null"
+                 stroke-width="4" stroke="midnightblue" fill="whitesmoke"/>
+    </g>
+    <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="360 " to="0" dur="100s"
+                      additive="sum" repeatCount="indefinite"/>
+</svg>

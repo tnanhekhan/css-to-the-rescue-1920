@@ -9,41 +9,94 @@ body {
     letter-spacing: 2px;
     text-transform: uppercase;
     text-align: center;
+    height: 100%;
+    overflow: hidden;
 }
 
-.lightMenu {
+section {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
 
-.darkMenu {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+img {
+    height: 400px;
+    width: 400px;
+    -webkit-transition: all ease-in-out 2s;
+    -moz-transition: all ease-in-out 2s;
+    transition: all ease-in-out 2s;
 }
 
-.menuContainer {
+img[src="img/sun.svg"]:hover {
+    transform: scale(5) translate(230px, 100px) rotate(100deg);
+    mix-blend-mode: multiply;
+}
+
+img[src="img/moon.svg"]:hover {
+    transform: scale(5) translate(-230px, 100px) rotate(-100deg);
+    mix-blend-mode: lighten;
+}
+
+img[src="img/stars.svg"] {
+    transform: scale(4)  translate(0,30%) rotate(-100deg);
+    transform-origin: 0 0;
+    mix-blend-mode: overlay;
+    display: none;
+    pointer-events: none;
+}
+
+main {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-template-columns: repeat(5, 3fr);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
     background-size: 200% 100%;
     -webkit-transition: all ease-in-out 1s;
     -moz-transition: all ease-in-out 1s;
     transition: all ease-in-out 1s;
 }
 
+input:checked ~ main img[src="img/sun.svg"] {
+    display: none;
+}
+
+input:checked ~ main img[src="img/stars.svg"] {
+    display: block;
+}
+
+input:not(:checked) ~ main img[src="img/moon.svg"] {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    html, body{
+        overflow-x: hidden;
+    }
+    main {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    input:checked ~ main .lightMenu {
+        display: none;
+    }
+
+    input:not(:checked) ~ main .darkMenu {
+        display: none;
+    }
+
+    input:not(:checked) ~ main .darkMenu svg {
+        display: none;
+    }
+}
+
 @media (prefers-color-scheme: dark) {
-    .menuContainer {
+    main {
         color: whitesmoke;
         background-image: linear-gradient(to left, whitesmoke 50%, midnightblue 50%);
     }
 
-    input:checked ~ .menuContainer {
+    input:checked ~ main {
         color: midnightblue;
         background-position: 100% 0;
     }
@@ -58,12 +111,12 @@ body {
 }
 
 @media (prefers-color-scheme: light) {
-    .menuContainer {
+    main {
         color: midnightblue;
         background-image: linear-gradient(to right, whitesmoke 50%, midnightblue 50%);
     }
 
-    input:checked ~ .menuContainer {
+    input:checked ~ main {
         color: whitesmoke;
         background-position: -100% 0;
     }
