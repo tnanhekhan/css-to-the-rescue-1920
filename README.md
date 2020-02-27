@@ -16,8 +16,8 @@ Responsive restaurant menu different with different menu items depending on dark
 
 ## Learning Goals
 - Learning to work with CSS
-- Learning about all CSS different kind of selectors 
+- Learning about CSS selectors 
 - Learning about SVG
 - Learning about SVG / CSS animation
-- Learning about handling clicks / hovers without JavaScript
+- Learning about handling clicks without JavaScript
 
