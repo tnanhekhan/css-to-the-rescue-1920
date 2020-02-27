@@ -29,21 +29,29 @@ img {
 }
 
 img[src="img/sun.svg"]:hover {
-    transform: scale(5) translate(230px, 100px) rotate(100deg);
+    transform: scale(5) translate(270px, 100px) rotate(100deg);
     mix-blend-mode: multiply;
 }
 
 img[src="img/moon.svg"]:hover {
-    transform: scale(5) translate(-230px, 100px) rotate(-100deg);
+    transform: scale(5) translate(-270px, 100px) rotate(-100deg);
     mix-blend-mode: lighten;
 }
 
 img[src="img/stars.svg"] {
-    transform: scale(4)  translate(0,30%) rotate(-100deg);
+    transform: scale(4) translate(0, 30%) rotate(-100deg);
     transform-origin: 0 0;
-    mix-blend-mode: overlay;
+    mix-blend-mode: initial;
     display: none;
     pointer-events: none;
+    animation: constellation 5s infinite;
+    animation-timing-function: ease-out;
+}
+
+img[src="img/clouds.svg"] {
+    transform-origin: 0 0;
+    pointer-events: none;
+    animation: clouds 20s infinite;
 }
 
 main {
@@ -61,6 +69,10 @@ input:checked ~ main img[src="img/sun.svg"] {
     display: none;
 }
 
+input:checked ~ main img[src="img/clouds.svg"] {
+    display: none;
+}
+
 input:checked ~ main img[src="img/stars.svg"] {
     display: block;
 }
@@ -69,10 +81,97 @@ input:not(:checked) ~ main img[src="img/moon.svg"] {
     display: none;
 }
 
+input:not(:checked) ~ main div {
+    display: none;
+}
+
+div > div {
+    position: fixed;
+    width: 3px;
+    height: 3px;
+    background-color: whitesmoke;
+    animation: movingStars infinite;
+}
+
+div:nth-child(1) {
+    animation-duration: 6s;
+    top: 200%
+}
+
+div:nth-child(2) {
+    animation-duration: 5s;
+    top: 60%;
+}
+
+div:nth-child(3) {
+    animation-duration: 4s;
+    top: 90%;
+}
+
+div:nth-child(4) {
+    animation-duration: 2s;
+    top: 110%;
+}
+
+div:nth-child(5) {
+    animation-duration: 8s;
+    top: 30%;
+}
+
+div:nth-child(6) {
+    animation-duration: 4s;
+    top: 180%;
+}
+
+div:nth-child(7) {
+    animation-duration: 2s;
+    top: 30%;
+}
+
+div:nth-child(8) {
+    animation-duration: 5s;
+    top: 130%;
+}
+
+@keyframes movingStars {
+    from {
+        left: -100px;
+        top: 0px;
+    }
+    to {
+        left: calc(100% + 100px);
+        bottom: 0px;
+    }
+}
+
+@keyframes clouds {
+    0% {
+        transform: translate(110%, 100%);
+    }
+
+    100% {
+        transform: translate(-500%, 100%);
+    }
+}
+
+@keyframes constellation {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
 @media (max-width: 600px) {
-    html, body{
+    html, body {
         overflow-x: hidden;
     }
+
     main {
         grid-template-columns: repeat(1, 1fr);
     }
