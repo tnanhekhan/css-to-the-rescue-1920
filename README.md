@@ -7,6 +7,7 @@ Responsive restaurant menu different with different menu items depending on dark
 
 ## Context
 - dark-mode
+- print-stylesheet
 
 ## Restrictions
 - When SVG meets CSS: Shapes / Masks / SVG
