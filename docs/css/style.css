@@ -1,0 +1,159 @@
+body {
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+main, label {
+    background-color: whitesmoke;
+    color: midnightblue;
+    background-image: linear-gradient(to right, whitesmoke 50%, midnightblue 50%);
+    background-size: 200% 100%;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    position: fixed;
+    margin: 0;
+    z-index: -10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all ease-in-out 1s;
+    padding: 12vh 0 0;
+}
+
+label {
+    padding: 8px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 8vh auto 8px;
+    width: 10%;
+    border: 1px solid midnightblue;
+    cursor: pointer;
+}
+
+
+header {
+    padding: 8px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 8px auto;
+    text-align: center;
+    color: midnightblue;
+    transition: all ease-in-out 1s;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+input {
+    display: none;
+}
+
+input:first-of-type:checked ~ main {
+    background-color: midnightblue;
+    color: whitesmoke;
+    background-position: -100% 0;
+}
+
+input:first-of-type:checked ~ header {
+    color: whitesmoke;
+}
+
+input:first-of-type:checked ~ label {
+    background-color: midnightblue;
+    color: whitesmoke;
+    background-position: -100% 0;
+
+    border: 1px solid whitesmoke;
+    box-shadow: 0 4px 0 whitesmoke, 0 4px 0 0 whitesmoke;
+}
+
+input:first-of-type:checked ~ label:active {
+    box-shadow: none;
+}
+
+input:first-of-type:checked ~ label:after {
+    box-shadow: none;
+}
+
+label {
+    display: block;
+    width: fit-content;
+    background-color: whitesmoke;
+    color: midnightblue;
+    box-shadow: 0 4px 0 midnightblue, 0 4px 0 0 midnightblue;
+    transition: box-shadow 100ms ease-in-out, background-position 1s ease-in-out, color 1s ease-in-out, border 1s ease-in-out;
+}
+
+label:active {
+    box-shadow: none;
+}
+
+input:first-of-type:checked ~ main section:first-of-type > div {
+    color: midnightblue;
+    opacity: 0;
+    pointer-events: none;
+}
+
+input:first-of-type:not(:checked) ~ main section:last-of-type > div {
+    color: whitesmoke;
+    opacity: 0;
+    pointer-events: none;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    height: 87vh;
+    z-index: 10;
+    justify-content: space-evenly;
+}
+
+section:first-of-type {
+    margin-left: 2vw;
+}
+
+section:last-of-type {
+    margin-right: 2vw;
+}
+
+section:first-of-type > div, section:last-of-type > div {
+    width: 19vh;
+    height: 19vh;
+    padding: 1vh;
+    transition: all 500ms ease-in-out;
+    margin-bottom: 8px;
+    pointer-events: all;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+section:not(:first-of-type):not(:last-of-type) {
+    width: 19vh;
+    height: 19vh;
+    padding: 1vh;
+    transition: all 500ms ease-in-out;
+    margin-bottom: 8px;
+}
+
+section:first-of-type > div {
+    text-align: left;
+    background: url("../img/blue-panel.svg");
+    color: whitesmoke;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+section:last-of-type > div {
+    text-align: right;
+    background: url("../img/white-panel.svg");
+    color: midnightblue;
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+}
