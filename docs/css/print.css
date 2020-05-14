@@ -1,0 +1,84 @@
+body {
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    user-select: none;
+    background-color: whitesmoke;
+    color: black;
+}
+
+header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1vh;
+    text-align: center;
+    transition: all ease-in-out 1s;
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    width: 100%;
+    padding: 12vh 0 0;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    justify-content: space-evenly;
+    width: 50%;
+    padding: 8px;
+}
+
+section:first-of-type > article, section:last-of-type > article {
+    padding: 1vh;
+    transition: all 500ms ease-in-out;
+    margin-bottom: 8px;
+    pointer-events: all;
+    display: flex;
+}
+
+section:first-of-type > article {
+    height: 20vh;
+    text-align: left;
+}
+
+section:last-of-type > article {
+    height: 20vh;
+    text-align: right;
+}
+
+section > article > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 4vw;
+}
+
+img {
+    filter: brightness(0) saturate(100%);
+}
+
+input {
+    display: none;
+}
+
+label {
+    display: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+img[src="img/moon.svg"] {
+    display: none;
+}
+
+img[src="img/sun.svg"] {
+    display: none;
+}

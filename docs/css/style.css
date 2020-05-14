@@ -209,7 +209,7 @@ input:not(:checked) ~ img[src="img/moon.svg"] {
 img[src="img/sun.svg"] {
     position: absolute;
     height: 50vh;
-    top: 8px;
+    top: 10vh;
     right: 8px;
     margin-right: 5vw;
     transition: all ease-in-out 1s;
@@ -220,7 +220,7 @@ img[src="img/moon.svg"] {
     height: 50vh;
     top: 8px;
     left: 8px;
-    margin-left: 5vw;
+    margin-left: 1vw;
     transition: all ease-in-out 1s;
 }
 
