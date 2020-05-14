@@ -3,6 +3,7 @@ body {
     letter-spacing: 1px;
     text-transform: uppercase;
     user-select: none;
+    overflow: hidden;
 }
 
 main, label {
@@ -22,7 +23,7 @@ main {
     left: 0;
     width: 100%;
     transition: all ease-in-out 1s;
-    padding: 12vh 0 0;
+    padding: 18vh 0 0;
 }
 
 label {
@@ -106,13 +107,13 @@ input:first-of-type:not(:checked) ~ main section:last-of-type > article {
     pointer-events: none;
 }
 
+
 section {
     display: flex;
     flex-direction: column;
-    height: 87vh;
     z-index: 10;
+    height: 80%;
     justify-content: space-evenly;
-    margin-top: 2vh;
 }
 
 section:last-of-type {
@@ -120,24 +121,15 @@ section:last-of-type {
     direction: rtl;
 }
 
-section:first-of-type > article, section:last-of-type > article {
+section > article {
+    display: flex;
+    flex-direction: row;
     width: 14vh;
-    height: 18vh;
+    height: 14vh;
     padding: 1vh;
     transition: all 500ms ease-in-out;
     margin-bottom: 8px;
-    pointer-events: all;
-    font-size: 80%;
-    display: flex;
-}
-
-section:first-of-type > article {
-    flex-direction: row;
-    padding-left: 8px;
-}
-
-section:last-of-type > article {
-    flex-direction: row-reverse;
+    z-index: 10;
 }
 
 section:first-of-type > article > div, section:last-of-type > article > div {
@@ -149,29 +141,17 @@ section:first-of-type > article > div, section:last-of-type > article > div {
 }
 
 section:first-of-type > article > div {
-    padding-left: 4vw;
+    padding-left: 2vw;
 }
 
-section:first-of-type > article:target, section:last-of-type > article:target {
+section > article:target {
     flex-grow: 1;
     width: 40vh;
     height: 19vh;
 }
 
-section:first-of-type > article:target > div, section:last-of-type > article:target > div {
+section > article:target > div {
     opacity: 100;
-}
-
-section:first-of-type > article > a > img, section:last-of-type > article > a > img {
-    padding-top: 20%;
-}
-
-section:not(:first-of-type):not(:last-of-type) {
-    width: 19vh;
-    height: 19vh;
-    padding: 1vh;
-    transition: all 500ms ease-in-out;
-    margin-bottom: 8px;
 }
 
 section:first-of-type > article {
@@ -186,6 +166,21 @@ section:last-of-type > article {
     color: midnightblue;
 }
 
+section > article > a {
+    display: flex;
+    flex-direction: column;
+}
+
+section > article > a > img {
+    height: 10vh;
+    padding: 1vh;
+    animation: spin 1s ease-in-out infinite;
+}
+
+section > article:target > a > img {
+    animation: none;
+}
+
 body > div > div {
     position: fixed;
     width: 3px;
@@ -195,6 +190,10 @@ body > div > div {
 }
 
 input:checked ~ img[src="img/sun.svg"] {
+    display: none;
+}
+
+input:checked ~ img[src="img/cloud.svg"] {
     display: none;
 }
 
@@ -208,28 +207,34 @@ input:not(:checked) ~ img[src="img/moon.svg"] {
 
 img[src="img/sun.svg"] {
     position: absolute;
-    height: 50vh;
-    top: 10vh;
+    height: 20vw;
+    top: 20vh;
     right: 8px;
+    z-index: -10;
     margin-right: 5vw;
     transition: all ease-in-out 1s;
 }
 
 img[src="img/moon.svg"] {
     position: absolute;
-    height: 50vh;
-    top: 8px;
+    height: 20vw;
+    top: 20vh;
     left: 8px;
+    z-index: -10;
     margin-left: 1vw;
     transition: all ease-in-out 1s;
 }
 
-img[src="img/moon.svg"]:hover {
-    transform: rotate(-360deg);
+img[src="img/cloud.svg"] {
+    position: absolute;
+    height: 15vh;
+    top: 4vh;
+    animation: cloud 20s linear infinite;
+    pointer-events: none;
 }
 
-img[src="img/sun.svg"]:hover {
-    transform: rotate(360deg);
+img[src="img/moon.svg"]:hover, img[src="img/sun.svg"]:hover {
+    transform: rotate(-360deg);
 }
 
 div:nth-child(1) {
@@ -313,14 +318,26 @@ div:nth-child(14) {
     }
 }
 
-@media screen and (max-width: 1024px) {
-    img[src="img/moon.svg"] {
-        opacity: 0;
-        pointer-events: none;
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    33% {
+        transform: rotate(20deg);
     }
 
-    img[src="img/sun.svg"] {
-        opacity: 0;
-        pointer-events: none;
+    66% {
+        transform: rotate(-20deg);
+    }
+}
+
+
+@keyframes cloud {
+    0% {
+        transform: translateX(-14vw);
+    }
+
+    100% {
+        transform: translateX(100vw);
     }
 }
