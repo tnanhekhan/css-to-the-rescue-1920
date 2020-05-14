@@ -26,12 +26,11 @@ main {
 }
 
 label {
-    padding: 8px;
-    left: 0;
-    right: 0;
-    margin: 8vh auto 8px;
-    border: 1px solid midnightblue;
-    cursor: pointer;
+    display: none !important;
+}
+
+input{
+    display: none !important;
 }
 
 
@@ -94,13 +93,13 @@ label:active {
     box-shadow: none;
 }
 
-input:first-of-type:checked ~ main section:first-of-type > article {
+input:first-of-type:checked ~ main section:first-of-type > div {
     color: midnightblue;
     opacity: 0;
     pointer-events: none;
 }
 
-input:first-of-type:not(:checked) ~ main section:last-of-type > article {
+input:first-of-type:not(:checked) ~ main section:last-of-type > div {
     color: whitesmoke;
     opacity: 0;
     pointer-events: none;
@@ -120,7 +119,7 @@ section:last-of-type {
     direction: rtl;
 }
 
-section:first-of-type > article, section:last-of-type > article {
+section:first-of-type > div, section:last-of-type > div {
     width: 14vh;
     height: 18vh;
     padding: 1vh;
@@ -131,16 +130,16 @@ section:first-of-type > article, section:last-of-type > article {
     display: flex;
 }
 
-section:first-of-type > article {
+section:first-of-type > div {
     flex-direction: row;
     padding-left: 8px;
 }
 
-section:last-of-type > article {
+section:last-of-type > div {
     flex-direction: row-reverse;
 }
 
-section:first-of-type > article > div, section:last-of-type > article > div {
+section:first-of-type > div > div, section:last-of-type > div > div {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -148,21 +147,21 @@ section:first-of-type > article > div, section:last-of-type > article > div {
     opacity: 0;
 }
 
-section:first-of-type > article > div {
+section:first-of-type > div > div {
     padding-left: 4vw;
 }
 
-section:first-of-type > article:target, section:last-of-type > article:target {
+section:first-of-type > div:target, section:last-of-type > div:target {
     flex-grow: 1;
     width: 40vh;
     height: 19vh;
 }
 
-section:first-of-type > article:target > div, section:last-of-type > article:target > div {
+section:first-of-type > div:target > div, section:last-of-type > div:target > div {
     opacity: 100;
 }
 
-section:first-of-type > article > a > img, section:last-of-type > article > a > img {
+section:first-of-type > div > a > img, section:last-of-type > div > a > img {
     padding-top: 20%;
 }
 
@@ -174,13 +173,13 @@ section:not(:first-of-type):not(:last-of-type) {
     margin-bottom: 8px;
 }
 
-section:first-of-type > article {
+section:first-of-type > div {
     text-align: left;
     background: url("../img/blue-panel.svg");
     color: whitesmoke;
 }
 
-section:last-of-type > article {
+section:last-of-type > div {
     text-align: right;
     background: url("../img/white-panel.svg");
     color: midnightblue;
@@ -207,120 +206,9 @@ input:not(:checked) ~ img[src="img/moon.svg"] {
 }
 
 img[src="img/sun.svg"] {
-    position: absolute;
-    height: 50vh;
-    top: 8px;
-    right: 8px;
-    margin-right: 5vw;
-    transition: all ease-in-out 1s;
+display: none;
 }
 
 img[src="img/moon.svg"] {
-    position: absolute;
-    height: 50vh;
-    top: 8px;
-    left: 8px;
-    margin-left: 5vw;
-    transition: all ease-in-out 1s;
-}
-
-img[src="img/moon.svg"]:hover {
-    transform: rotate(-360deg);
-}
-
-img[src="img/sun.svg"]:hover {
-    transform: rotate(360deg);
-}
-
-div:nth-child(1) {
-    animation-duration: 6s;
-    top: 200%
-}
-
-div:nth-child(2) {
-    animation-duration: 5s;
-    top: 60%;
-}
-
-div:nth-child(3) {
-    animation-duration: 4s;
-    top: 90%;
-}
-
-div:nth-child(4) {
-    animation-duration: 2s;
-    top: 110%;
-}
-
-div:nth-child(5) {
-    animation-duration: 8s;
-    top: 30%;
-}
-
-div:nth-child(6) {
-    animation-duration: 4s;
-    top: 180%;
-}
-
-div:nth-child(7) {
-    animation-duration: 2s;
-    top: 30%;
-}
-
-div:nth-child(8) {
-    animation-duration: 5s;
-    top: 33%;
-}
-
-div:nth-child(9) {
-    animation-duration: 5s;
-    top: 234%;
-}
-
-div:nth-child(10) {
-    animation-duration: 2s;
-    top: 56%;
-}
-
-div:nth-child(11) {
-    animation-duration: 5s;
-    top: 67%;
-}
-
-div:nth-child(12) {
-    animation-duration: 10s;
-    top: 33%;
-}
-
-div:nth-child(13) {
-    animation-duration: 5s;
-    top: 345%;
-}
-
-div:nth-child(14) {
-    animation-duration: 5s;
-    top: 100%;
-}
-
-@keyframes movingStars {
-    from {
-        left: -100px;
-        top: 0px;
-    }
-    to {
-        left: calc(100% + 100px);
-        bottom: 0px;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    img[src="img/moon.svg"] {
-        opacity: 0;
-        pointer-events: none;
-    }
-
-    img[src="img/sun.svg"] {
-        opacity: 0;
-        pointer-events: none;
-    }
+display: none;
 }

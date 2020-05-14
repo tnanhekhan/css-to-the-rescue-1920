@@ -12,8 +12,6 @@ Responsive restaurant menu different with different menu items depending on dark
 ## Restrictions
 - When SVG meets CSS: Shapes / Masks / SVG
 - Two colours (midnightblue & whitesmoke)
-- Less than 5kb CSS 
-- Responsive without media queries
 - Selector first, no use of classes
 
 ## Learning Goals
